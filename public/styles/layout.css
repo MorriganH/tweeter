@@ -33,3 +33,44 @@ body {
    color: #545149;
    background-color: #f4f1ec;
  }
+
+ section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  width: 100%;
+  padding: 10px;
+  border: #545149 solid;
+}
+
+article:hover {
+  box-shadow: 8px 8px rgb(185, 185, 185);
+}
+
+article > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: #545149 solid;
+}
+
+.fa-solid {
+  color: #4056A1;
+}
+
+.fa-solid:hover {
+  color: goldenrod;
+}
+

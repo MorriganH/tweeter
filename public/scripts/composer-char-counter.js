@@ -1,5 +1,7 @@
 $(document).ready(() => {
   $('#tweet-text').on('keyup', function(event) {
+
+    //calculates remaining characters allowed in tweet and displays # on screen
     let maxChars = 140;
     let typed = $(this).val().length;
     let remaining = maxChars - typed;
