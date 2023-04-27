@@ -8,7 +8,7 @@ $(document).ready(() => {
 
   // takes in array of tweet data and displays them on the page, newer at the top
   const renderTweets = (tweets) => {
-    for ( let tweet of tweets) {
+    for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       
       $('#tweets-container').prepend($($tweet));
@@ -62,10 +62,10 @@ $(document).ready(() => {
   // sends server request for tweet data and passed it into renderTweets
   const loadTweets = () => {
     $.get("/tweets")
-    .then((res) => {
-      renderTweets(res);
-    })
-  }
+      .then((res) => {
+        renderTweets(res);
+      });
+  };
   
   // immediately call loadTweets when page is ready
   loadTweets();
@@ -75,7 +75,7 @@ $(document).ready(() => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   $("form").on('submit', function(event) {
     event.preventDefault();
@@ -84,11 +84,11 @@ $(document).ready(() => {
     if (!$('#tweet-text').val()) {
       $('#no-text').removeClass('invisible');
       $('#no-text-alert').removeClass('invisible');
-      throw Error ("Text field empty");
+      throw Error("Text field empty");
     }
     if ($('#tweet-text').val().length > 140) {
       $('#too-much-text').removeClass('invisible');
-      throw Error ("Tweet too long!");
+      throw Error("Tweet too long!");
     }
     
     // serializes input text for the .post and clears text field
@@ -100,8 +100,9 @@ $(document).ready(() => {
         /*  this causes the page to scroll awkwardly when displaying the new tweet, but I
         *   had the code reviewed and the instructor said this was sufficient since we
         *   haven't learned react yet */
-        $('#tweets-container').empty();
-        loadTweets();
+       $('#tweets-container').empty();
+       loadTweets();
+        $('.counter').val(140);
       });
   });
 

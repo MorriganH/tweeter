@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('#tweet-text').on('keyup', function(event) {
+  $('#tweet-text').on('keyup', function() {
 
     // hides error messages if they were shown
     $('#too-much-text').addClass('invisible');
