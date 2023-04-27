@@ -45,6 +45,7 @@ body {
 article {
   width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
   border: #545149 solid;
 }
 
@@ -68,9 +69,24 @@ footer {
 
 .fa-solid {
   color: #4056A1;
+  padding: 5px;
 }
 
 .fa-solid:hover {
   color: goldenrod;
 }
 
+.alert {
+  width: 100%;
+  border: red solid;
+  color: red;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.invisible {
+  height: 0px;
+  border: 0;
+  font-size: 0px;
+}

@@ -1,6 +1,10 @@
 $(document).ready(() => {
   $('#tweet-text').on('keyup', function(event) {
 
+    // hides error messages if they were shown
+    $('#too-much-text').addClass('invisible');
+    $('#no-text').addClass('invisible');
+
     //calculates remaining characters allowed in tweet and displays # on screen
     let maxChars = 140;
     let typed = $(this).val().length;
