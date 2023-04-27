@@ -36,26 +36,6 @@ $(document).ready(() => {
     $footer.append($timeago, $iconDiv);
     $article.append($header, $safeHTML, $footer);
 
-    // const $tweet = $(`<article>
-    //   <header>
-    //     <div>
-    //       <img src="${tweetData.user.avatars}">
-    //       <span>${tweetData.user.name}</span>
-    //     </div>
-    //     <span>${tweetData.user.handle}</span>
-    //   </header>
-    //   ${$safeHTML}
-    //   <footer>
-    //     <div class="timeago">${timeago.format(tweetData.created_at)}</div>
-    //     <div>
-    //       <i class="fa-solid fa-flag"></i>
-    //       <i class="fa-solid fa-retweet"></i>
-    //       <i class="fa-solid fa-heart"></i>
-    //     </div>
-    //   </footer>
-    // </article>
-    // <br>`);
-
     return $article;
   };
 
